@@ -1,0 +1,94 @@
+.hero-title {
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "poppins", sans-serif;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+    flex-wrap: wrap;
+    padding: 20px;
+    overflow-x: hidden;
+    background: url('BGCAMERA.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+.background-div, .education-div, .personality-div, .experience-div {
+    width: 300px;
+    height: 535px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: whitesmoke; 
+    text-align: center; 
+    padding: 20px; 
+    border-radius: 10px; 
+    font-family: "poppins", sans-serif;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.background-div:hover, .education-div:hover, .personality-div:hover, .experience-div:hover {
+    background-color: black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.5), inset -1px -1px rgba(14,13,13,.5);
+}
+
+.background-text, .education-text, .personality-text, .experience-text {
+    font-family: "poppins", sans-serif;
+    font-weight: 300;
+    color: whitesmoke;
+    font-size: 16px;
+    margin-top: 15px; 
+    text-align: justify;
+    transition: .3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        gap: 20px;
+        padding: 20px;
+        padding-top: 100px;
+    }
+
+    .hero-title {
+        position: relative;
+        font-size: 2rem;
+        color: whitesmoke;
+        text-align: center;
+    }
+    
+
+    .background-div, .education-div, .personality-div, .experience-div {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .background-text, .education-text, .personality-text, .experience-text {
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: justify;
+    }
+}

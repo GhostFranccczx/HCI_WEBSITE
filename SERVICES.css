@@ -1,0 +1,73 @@
+.hero-section {
+    background: url('BGCAMERA.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative; /* Not fixed */
+    text-align: center;
+    overflow-x: hidden; /* prevent sideways scroll */
+    overflow-y: auto;   /* allow vertical scroll */
+}
+
+.service-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* allow wrap when needed */
+    padding: 20px;
+    gap: 100px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto; /* allow scroll if items overflow */
+}
+
+.port-div, .event-div, .product-div {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    min-height: 400px; /* changed from fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.port-div:hover, .event-div:hover, .product-div:hover {
+    background-color: black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.5),
+                0 0 30px rgba(255, 255, 255, 0.5),
+                0 0 40px rgba(255, 255, 255, 0.5),
+                0 0 50px rgba(255, 255, 255, 0.5),
+                inset -1px -1px rgba(14,13,13,0.5);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .port-div, .event-div, .product-div {
+        width: 90%;
+        min-height: 300px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .port-div, .event-div, .product-div {
+        width: 95%;
+    }
+}

@@ -1,0 +1,89 @@
+.nav-item {
+    margin: 0 10px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+}
+.navbar {
+    margin: 20px;
+    height: 60px;
+    border-radius: 30px;
+    opacity: 0.8;
+}
+.navbar-brand {
+    font-weight: 500;
+    font-size: 24px;
+    color: #c8ca30;
+    transition: color 0.3s ease-in-out; 
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+}
+.navbar-toggler:focus, .btn-close:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-link {
+    color: #313030;
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #c8ca30;
+}
+@media (min-width: 991px) {
+        .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: rgb(211, 147, 30);
+        transition: 0.2s ease-in-out;
+        visibility: hidden;
+}
+
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.hero-section {
+    background: url('BGCAMERA.jpg') no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-section::before {
+    background-color: rbga (0, 0, 0, 0.6);
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.display-4 {
+    padding-top: 280px;
+    font-family: "poppins", sans-serif;
+    font-size: 60px;
+    color: whitesmoke;
+    font-weight: 650;
+}
+
+.lead {
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-top: 20px;
+}

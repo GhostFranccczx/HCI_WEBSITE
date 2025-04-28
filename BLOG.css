@@ -1,0 +1,102 @@
+.Blog-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden; /* no sideways scroll */
+    overflow-y: auto;   /* allow vertical scrolling */
+}
+
+.blog-description {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 1100px; /* better: max-width instead of width */
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: whitesmoke;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    text-align: justify;
+    transition: 0.3s ease-in-out;
+    overflow-wrap: break-word; /* prevent long text overflow */
+}
+
+.hero-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 20px;
+}
+
+p, ul li, h1, h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: whitesmoke;
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blog-description:hover {
+    background-color: black;
+    box-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 255, 255, 0.5),
+        0 0 50px rgba(255, 255, 255, 0.5),
+        inset -1px -1px rgba(14,13,13,0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Blog-container {
+        flex-direction: column;
+        padding: 10px;
+        overflow-y: auto; /* still allow scroll */
+    }
+
+    .blog-description {
+        width: 90%;
+        min-height: auto;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        margin-top: -30px;
+        margin-bottom: 15px;
+    }
+
+    p, ul li, h1, h2 {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.3rem;
+    }
+
+    p, ul li, h1, h2 {
+        font-size: 11px;
+    }
+}
